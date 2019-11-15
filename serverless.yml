@@ -1,0 +1,19 @@
+service: node-lambda
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  app:
+    handler: handler.app
+    events: 
+      - http:
+          path: app/get
+          method: get
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: users/create
+          method: get
