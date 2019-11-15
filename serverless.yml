@@ -1,5 +1,12 @@
 service: node-lambda
 
+package:
+  individually: true
+
+plugins: 
+  - serverless-bundle
+  - serverless-offline
+
 provider:
   name: aws
   runtime: nodejs10.x
